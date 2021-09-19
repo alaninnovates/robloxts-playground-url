@@ -1,0 +1,51 @@
+{
+	"name": "robloxts-playground-url",
+	"displayName": "robloxts-playground-url",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.58.2"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:robloxts-playground-url.createPlayground"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "robloxts-playground-url.createPlayground",
+				"title": "Create Playground"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "robloxts-playground-url.createPlayground"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts"
+	},
+	"devDependencies": {
+		"@types/lz-string": "^1.3.34",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.60.0",
+		"@typescript-eslint/eslint-plugin": "^4.26.0",
+		"@typescript-eslint/parser": "^4.26.0",
+		"eslint": "^7.27.0",
+		"typescript": "^4.3.2",
+		"vscode-test": "^1.5.2"
+	},
+	"dependencies": {
+		"lz-string": "^1.4.4"
+	}
+}
